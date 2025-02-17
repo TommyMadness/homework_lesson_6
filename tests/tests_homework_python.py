@@ -86,6 +86,7 @@ def test_find_suitable_user():
 def optimize_func(func, *args):
     readable_name = func.__name__.title().replace("_", " ")
     args_str = ", ".join(args)
+    print(f"{readable_name} [{args_str}]")
     return f"{readable_name} [{args_str}]"
 
 def test_readable_function():
