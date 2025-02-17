@@ -85,13 +85,8 @@ def test_find_suitable_user():
 
 def optimize_func(func, *args):
     readable_name = func.__name__.title().replace("_", " ")
-
-    # symbols_to_replace = str("()',")
-
-    # for symbol in symbols_to_replace:
-    #     args = args.replace(symbol,"")
-
-    return f"{readable_name} [{args}]"
+    args_str = ", ".join(args)
+    return f"{readable_name} [{args_str}]"
 
 def test_readable_function():
     open_browser(browser_name="Chrome")
